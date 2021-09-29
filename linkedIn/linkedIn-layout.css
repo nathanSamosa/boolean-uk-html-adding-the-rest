@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: lightgray;
+}
+
+/*----------HEADER----------*/
+
+.headerContainer {
+    width: 100vw;
+    height: 100px;
+    background-color: white;
+
+    display: grid;
+    gap: 25px;
+    padding: 10px;
+    margin: auto;
+    justify-content: center;
+
+    grid-template:
+        "logo search widgets" 80px /
+        80px 725px 500px;
+}
+
+.headerContainer > div {
+    border: dashed 2px blue;
+    background-color: white;
+
+    display: grid;
+}
+
+@media screen and (max-width: 1350px) {
+    .headerContainer {
+      grid-template:
+        "logo search" 80px /
+        80px 725px;
+    }
+  
+    .widgets {
+      display: none;
+    }
+}
+
+/*----------MAIN BODY----------*/
+.mainContainer {
+    width: auto;
+    height: auto;
+
+    display: grid;
+    gap: 25px;
+    padding-top: 25px;
+    margin: auto;
+    justify-content: center;
+
+    grid-template:
+        "profile feed suggestions" 1fr /
+         350px 600px 350px;
+}
+
+@media screen and (max-width: 1350px) {
+    .mainContainer {
+      grid-template:
+        "profile feed" 1fr /
+        350px 600px;
+    }
+  
+    .suggestions {
+      display: none;
+    }
+}
+
+.mainContainer > div { /* 3 MAIN COLUMN CONTAINERS */
+    display: grid;
+}
+.mainContainer > div > div { /* MAIN VISIBLE BLOCKS */
+    border: dashed 2px blue;
+    background-color: white;
+    display: grid;
+}
+.mainContainer > div > div > div { /* BLOCK SUB SECTIONS */ 
+    border: dashed 2px green;
+    background-color: white;
+    display: grid;
+}
+.mainContainer > div > div > div > div { /* BLOCK SUB SECTION DETAILS */ 
+    border: dashed 2px red;
+    background-color: white;
+    display: grid;
+}
+
+.profile {
+    display:grid;
+    gap: 25px;
+    grid-template:
+        "account" 500px
+        "analytics" 300px
+        "about" 300px /
+        1fr;
+        
+}
+.profilePic {
+    height: 300px;
+}
+
+.feed {
+    display:grid;
+    gap: 25px;
+    grid-template:
+        "forum" 150px
+        "newsFeed" 1000px /
+        1fr;
+}
+
+.suggestions {
+    display:grid;
+    gap: 25px;
+    grid-template:
+        "newsToday" 400px
+        "trending" 300px
+        "trending" 300px
+}
+
+.textBox {
+    display: grid;
+    grid-template:
+        "profPicSmall enterText" 50px /
+        50px 1fr;
+}
+
+.attachments {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.profPicSmall {
+    border-radius: 25px;
+}
+
+.forum {
+    display:grid;
+    grid-template:
+        "textbox" 1fr
+        "attachments" 1fr
+}
+.largeTab {
+    display:grid;
+    gap: 10px;
+    padding: 10px;
+}
